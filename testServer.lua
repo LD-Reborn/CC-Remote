@@ -44,11 +44,9 @@ buttonsToggleRemoteLight = GUI.createButton("flash remote", 10, 7, 15, 5, colors
 buttonsToggleRemoteLight.onClick = toggleRemoteLight
 buttonsToggleRemoteLight.toggle = true
 
-GUI.drawAll()
-
 -- Main loop
 while true do
-    --GUI.drawAll()
+    GUI.drawAll()
     event = {os.pullEvent()}
     GUI.handleEvent(event)
     Server:handleEvent(event)
