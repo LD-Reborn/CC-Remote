@@ -1,4 +1,5 @@
 -- Ensure GUI
+--  CC-GUI is used for the button rendering and click event handling 
 local GUI = {}
 local CCGUIUrl = "https://raw.githubusercontent.com/LD-Reborn/CC-GUI/refs/heads/main/GUI.lua"
 local success, result = pcall(function()
