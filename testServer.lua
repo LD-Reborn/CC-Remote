@@ -27,7 +27,7 @@ local listenPort = 1000
 Server:init(wrappedPeripheral, listenPort)
 
 -- Functions and definitions
-local remoteLightComputerId = 13
+local remoteLightComputerId = "spawner_zombie"
 
 function toggleRemoteLight(param)
     id = param.id

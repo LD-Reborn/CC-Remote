@@ -18,7 +18,12 @@ function Client:init(wrappedPeripheral, serverId, serverPort, responsePort)
     if not wrappedPeripheral.isOpen(responsePort) then
         wrappedPeripheral.open(responsePort)
     end
-    self.id = os.getComputerID()
+    local label = os.getComputerLabel()
+    if label == nil or label == "" then
+        self.id = os.getComputerID()
+    else
+        self.id = label
+    end
     if self.isPC then
         self.clientType = "PC"
     elseif self.isTurtle then
